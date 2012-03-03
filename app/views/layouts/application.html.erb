@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Banshee</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="title">
+  <p> Здесь будет титульник наш</p>
+</div>
+
+<div id="columns">
+    <div id="main_menu">
+      <a href="http://www...../my_page" id="my_page"> Моя страница</a></br></br>
+      <a href="http://www...../friends" id="friends"> Друзья</a></br></br>
+      <a href="http://www...../videos" id="videos"> Видео</a></br></br>
+      <a href="http://www...../photos" id="photos"> Фотографии</a></br></br>
+    </div>
+
+
+    <div id="right_column">
+        <div id="music_player"> Проигрыватель музыки</div>
+
+        <div id="work_panel">
+          <div id="search_block">Search</div>
+          <div id="input_search">
+            <input type="TEXT" class="input">
+          </div>
+          <div id="info_block">Info</div>
+          <div id="settings_block">Settings</div>
+        </div>
+
+        <div id="body_page">
+          <p>А здесь основное тело</p>
+            <%= yield %>
+        </div>
+    </div>
+</div>
+</body>
+</html>
